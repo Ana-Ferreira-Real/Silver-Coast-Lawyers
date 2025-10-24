@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://ana-ferreira-real.github.io/Silver-Coast-Lawyers/sitemap.xml
