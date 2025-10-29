@@ -201,16 +201,18 @@
     "telephone":"+351 962 639 197"
   };
   ldnode.textContent = JSON.stringify(ld);
-
-  // WhatsApp URL
-  if (962639197.toString().length === 9) {
-    const url = "https://wa.me/351962639197";
-    waBtn.href = url;
-    const link = document.getElementById('wa-link');
+<!-- WhatsApp URL (fix) -->
+<script>
+  (function () {
+    var WA = "962639197";                       // número de telefone
+    var url = "https://wa.me/351" + WA;
+    var waBtn = document.getElementById('wa');  // botão principal
+    if (waBtn) waBtn.href = url;
+    var link = document.getElementById('wa-link'); // link na secção Contactos
     if (link) link.href = url;
-  }
-
-  function setLang(l) {
+  })();
+</script>
+ 
     const dict = I18N[l] || I18N['pt'];
     i18nNodes.forEach(n => {
       const k = n.getAttribute('data-i18n');
