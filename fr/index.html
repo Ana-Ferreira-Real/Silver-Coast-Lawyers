@@ -1,41 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- IMPORTANT pour que tous les chemins fonctionnent sur GitHub Pages -->
   <base href="/Silver-Coast-Lawyers/">
 
   <title>Ana Ferreira Real – Avocate</title>
-  <meta name="description" content="Avocate exerçant à titre individuel, basée à Caldas da Rainha, Silver Coast (Portugal). Achats/ventes et locations immobilières, testaments, successions et contrats. Service en FR/EN/PT.">
+  <meta name="description" content="Avocate exerçant à titre individuel, basée à Caldas da Rainha, Silver Coast (Portugal). Achats/ventes et locations immobilières, testaments, successions et contrats. Service en FR/EN/PT." />
 
-  <link rel="stylesheet" href="styles.css?v=20251030-fr">
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Override spécifique FR pour forcer le logo grand (vient APRÈS styles.css) -->
+  <style>
+    header .wrap .logo,
+    .site-header .logo,
+    img#frLogoFix.logo {
+      width: 520px !important;
+      max-width: 95vw !important;
+      height: auto !important;
+      display: block !important;
+      margin: 0 auto !important;
+      transform: none !important;
+      filter: none !important;
+    }
+
+    /* Par sécurité, neutraliser tout transform sur l’en-tête */
+    .header-inner, .site-header .header-inner, header .wrap {
+      transform: none !important;
+    }
+  </style>
 </head>
-
 <body>
   <header class="site-header">
     <div class="wrap header-inner">
-
-      <!-- LOGO - versão FR com tamanho forçado -->
-      <img
-        src="assets/og-image.jpg"
-        alt="Ana Ferreira Real — logotype"
-        class="logo"
-        id="frLogoFix"
-        style="
-          width: 520px !important;
-          max-width: 95vw !important;
-          height: auto !important;
-          display: block !important;
-          margin: 0 auto !important;
-          transform: none !important;
-          filter: none !important;
-        "
-      >
-
+      <img src="assets/og-image.jpg" alt="Ana Ferreira Real — logotype" class="logo" id="frLogoFix" />
       <nav class="lang">
-        <a href="/">PT</a>
-        <a href="/en/">EN</a>
-        <a href="/fr/" class="active">FR</a>
+        <a href="/Silver-Coast-Lawyers/">PT</a>
+        <a href="/Silver-Coast-Lawyers/en/">EN</a>
+        <a href="/Silver-Coast-Lawyers/fr/" class="active">FR</a>
       </nav>
     </div>
   </header>
@@ -72,11 +76,9 @@
 
     <section class="card">
       <h2>Contacts</h2>
-      <ul class="contact-list">
-        <li>📧 E-mail : <a href="mailto:anaferreirareal.adv@gmail.com">anaferreirareal.adv@gmail.com</a></li>
-        <li>📞 Téléphone/WhatsApp : <a href="https://wa.me/351962639197">+351 962 639 197</a></li>
-        <li>📍 Adresse : Avenida 1.º de Maio, n.º 1, 2.º andar, 2500-081 Caldas da Rainha</li>
-      </ul>
+      <p>📧 E-mail : <a href="mailto:anaferreirareal.adv@gmail.com">anaferreirareal.adv@gmail.com</a></p>
+      <p>📞 Téléphone/WhatsApp : <a href="https://wa.me/351962639197">+351 962 639 197</a></p>
+      <p>📍 Adresse : Avenida 1.º de Maio, n.º 1, 2ᵉ étage, 2500-081 Caldas da Rainha</p>
     </section>
   </main>
 
