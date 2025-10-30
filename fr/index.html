@@ -8,31 +8,29 @@
   <title>Ana Ferreira Real – Avocate</title>
   <meta name="description" content="Avocate exerçant à titre individuel, basée à Caldas da Rainha, Silver Coast (Portugal). Achats/ventes et locations immobilières, testaments, successions et contrats. Service en FR/EN/PT.">
 
-  <!-- CSS principal + quebra de cache -->
   <link rel="stylesheet" href="styles.css?v=20251030-fr">
-
-  <!-- Forçar logótipo grande nesta versão -->
-  <style>
-    .site-header .logo {
-      width: 520px !important;   /* aumenta ou diminui conforme quiseres */
-      max-width: 95vw !important;
-      height: auto !important;
-      display: block !important;
-      margin: 0 auto !important;
-      transform: none !important;
-      filter: none !important;
-    }
-    /* Garantir que nada reduz o logo */
-    header, .site-header, .wrap, .header-inner {
-      transform: none !important;
-    }
-  </style>
 </head>
 
 <body>
   <header class="site-header">
     <div class="wrap header-inner">
-      <img class="logo" src="assets/og-image.jpg" alt="Ana Ferreira Real — logotype">
+
+      <!-- LOGO - versão FR com tamanho forçado -->
+      <img
+        src="assets/og-image.jpg"
+        alt="Ana Ferreira Real — logotype"
+        class="logo"
+        id="frLogoFix"
+        style="
+          width: 520px !important;
+          max-width: 95vw !important;
+          height: auto !important;
+          display: block !important;
+          margin: 0 auto !important;
+          transform: none !important;
+          filter: none !important;
+        "
+      >
 
       <nav class="lang">
         <a href="/">PT</a>
