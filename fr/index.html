@@ -12,10 +12,15 @@
   <!-- CSS principal (mesmo que PT/EN) -->
   <link rel="stylesheet" href="styles.css">
 
-  <!-- Apenas FR: corrigir tamanho do logótipo -->
+  <!-- Correção do tamanho do logótipo apenas na versão FR -->
   <style>
-    img#frLogoFix.logo{
-      width: 520px !important;
+    :root { --logo-w: 600px; } /* ajusta aqui se quiseres (ex: 520px ou 650px) */
+
+    img#frLogoFix.logo,
+    img.logo,
+    .site-header img.logo,
+    header .logo {
+      width: var(--logo-w) !important;
       max-width: 95vw !important;
       height: auto !important;
       display: block !important;
@@ -29,8 +34,7 @@
 <body>
   <header class="site-header">
     <div class="wrap header-inner">
-      <!-- Podes trocar por assets/logo-header.png se quiseres -->
-      <img id="frLogoFix" class="logo" src="assets/og-image.jpg" alt="Ana Ferreira Real — logotype">
+      <img id="frLogoFix" class="logo" src="assets/og-image.jpg?v=fr2" alt="Ana Ferreira Real — logotype">
 
       <nav class="lang">
         <a href="/">PT</a>
@@ -74,16 +78,4 @@
       <h2>Contacts</h2>
       <ul class="contact-list">
         <li>📧 E-mail : <a href="mailto:anaferreirareal.adv@gmail.com">anaferreirareal.adv@gmail.com</a></li>
-        <li>📞 Téléphone/WhatsApp : <a href="https://wa.me/351962639197">+351 962 639 197</a></li>
-        <li>📍 Adresse : Avenida 1.º de Maio, n.º 1, 2.º andar, 2500-081 Caldas da Rainha</li>
-      </ul>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap">
-      <small>© 2025 Ana Ferreira Real — Silver Coast Lawyer</small>
-    </div>
-  </footer>
-</body>
-</html>
+        <li>📞 Télépho
