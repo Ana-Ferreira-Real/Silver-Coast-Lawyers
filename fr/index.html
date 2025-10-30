@@ -10,18 +10,23 @@
   <meta name="description" content="Avocate exerçant à Caldas da Rainha, Silver Coast (Portugal). Achats/ventes et locations immobilières, testaments, successions et contrats. Service en FR/EN/PT.">
 
   <!-- Tenta carregar CSS externo (há também fallback inline no index principal, caso precises) -->
-  <link rel="stylesheet" href="/Silver-Coast-Lawyers/styles.css?v=fr1">
-<style id="fr-logo-hotfix">
-  /* Hotfix específico da página FR */
-  .logo{
-    width:360px !important;
-    max-width:90vw !important;
-    height:auto !important;
-    display:block !important;
-    margin:0 auto !important;
-    transform:none !important;
-    filter: none; /* opcional, se quiseres ver sem drop-shadow */
+  <style id="fr-logo-hotfix">
+  /* Força o logo grande especificamente na página FR */
+  #frLogoFix {
+    width: 520px !important;      /* ajusta aqui se quiseres maior/menor */
+    max-width: 90vw !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto !important;
+    transform: none !important;
+    filter: none !important;
   }
+  /* Garante que nenhum wrapper aplica transform/escala ao logo */
+  header, .site-header, .wrap, .header-inner {
+    transform: none !important;
+  }
+  /* Em caso de conflito com alguma classe genérica .logo do CSS global */
+  img#frLogoFix.logo { width: 520px !important; max-width: 90vw !important; }
 </style>
 
 </head>
