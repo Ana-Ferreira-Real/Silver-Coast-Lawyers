@@ -3,50 +3,48 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- MUITO IMPORTANTE no GitHub Pages em repositório de projeto -->
+  <!-- MUITO IMPORTANTE para paths relativos funcionarem -->
   <base href="/Silver-Coast-Lawyers/">
 
   <title>Ana Ferreira Real – Avocate</title>
-  <meta name="description" content="Avocate exerçant à Caldas da Rainha, Silver Coast (Portugal). Achats/ventes et locations immobilières, testaments, successions et contrats. Service en FR/EN/PT.">
+  <meta name="description" content="Avocate exerçant à titre individuel, basée à Caldas da Rainha, Silver Coast (Portugal). Achats/ventes et locations immobilières, testaments, successions et contrats. Service en FR/EN/PT.">
 
-  <!-- Tenta carregar CSS externo (há também fallback inline no index principal, caso precises) -->
-  <style id="fr-logo-hotfix">
-  /* Força o logo grande especificamente na página FR */
-  #frLogoFix {
-    width: 520px !important;      /* ajusta aqui se quiseres maior/menor */
-    max-width: 90vw !important;
-    height: auto !important;
-    display: block !important;
-    margin: 0 auto !important;
-    transform: none !important;
-    filter: none !important;
-  }
-  /* Garante que nenhum wrapper aplica transform/escala ao logo */
-  header, .site-header, .wrap, .header-inner {
-    transform: none !important;
-  }
-  /* Em caso de conflito com alguma classe genérica .logo do CSS global */
-  img#frLogoFix.logo { width: 520px !important; max-width: 90vw !important; }
-</style>
+  <!-- carrega o mesmo CSS do site -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Opcional: override MINIMAL para o tamanho do logo em FR -->
+  <style>
+    /* se quiseres o logo um pouco maior/menor em FR, ajusta aqui */
+    img#frLogoFix.logo {
+      width: 360px !important;
+      max-width: 90vw !important;
+      display: block !important;
+      margin: 0 auto !important;
+      height: auto !important;
+      transform: none !important;
+      filter: none !important;
+    }
+  </style>
+</head>
+
 
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <!-- Podes trocar por /assets/logo-header.png se quiseres -->
-<img src="/Silver-Coast-Lawyers/assets/og-image.jpg" alt="Ana Ferreira Real — logotype" class="logo" style="width:360px !important; max-width:90vw !important; display:block; margin:auto;">
-
-
-
-      <nav class="lang">
-        <a href="/Silver-Coast-Lawyers/">PT</a>
-        <a href="/Silver-Coast-Lawyers/en/">EN</a>
-        <a href="/Silver-Coast-Lawyers/fr/" class="active">FR</a>
-      </nav>
-    </div>
-  </header>
-
+ <header class="site-header">
+  <div class="wrap header-inner">
+    <img
+      id="frLogoFix"
+      class="logo"
+      src="assets/og-image.jpg"
+      alt="Ana Ferreira Real — logotype">
+    <nav class="lang">
+      <a href="/Silver-Coast-Lawyers/">PT</a>
+      <a href="/Silver-Coast-Lawyers/en/">EN</a>
+      <a href="/Silver-Coast-Lawyers/fr/" class="active">FR</a>
+    </nav>
+  </div>
+</header>
   <main class="wrap">
     <section class="hero">
       <h1>Ana Ferreira Real – Avocate</h1>
