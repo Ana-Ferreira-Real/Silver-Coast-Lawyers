@@ -1,1 +1,101 @@
-/* (same as before, omitted for brevity in code cell) */
+:root {
+  --bg: #0b0b0b;
+  --panel: #121212;
+  --text: #eaeaea;
+  --muted: #b9b9b9;
+  --gold: #d4b26a;
+  --line: #1c1c1c;
+  --pill: #161616;
+  --shadow: 0 10px 30px rgba(0, 0, 0, .35);
+}
+
+/* Reseta estilos básicos */
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+}
+
+.wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(180deg, #0c0c0c, #090909);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 0;
+}
+
+.logo {
+  width: 480px;
+  max-width: 92vw;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 6px 24px rgba(0, 0, 0, .35));
+}
+
+@media (max-width: 720px) { .logo { width: 340px; } }
+@media (max-width: 480px) { .logo { width: 260px; } }
+
+/* ---------- Idiomas ---------- */
+.lang {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+}
+.lang a {
+  background: transparent;
+  border: 1px solid #2a2a2a;
+  color: var(--muted);
+  padding: 8px 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: .2s ease;
+}
+.lang a.active {
+  border-color: var(--gold);
+  color: #fff;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  padding: 46px 0 10px;
+}
+.hero h1 {
+  font-size: 2.2rem;
+  margin: 0 0 6px;
+}
+.tagline {
+  color: var(--muted);
+  margin: 6px 0 18px;
+  font-size: 1.05rem;
+  letter-spacing: .3px;
+}
+.cta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.btn {
+  display: inline-block;
+  padding: 13px 18px;
+  border-radius: 14px;
+  border: 1px solid #2a2a2a;
+  text-decoration: none;
+  color: #fff;
+  box-shadow: var(--shadow);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.btn:hover {
