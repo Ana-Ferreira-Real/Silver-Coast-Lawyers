@@ -3,41 +3,43 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- MUITO IMPORTANTE para paths relativos funcionarem -->
+  <!-- MUITO IMPORTANTE para caminhos relativos funcionarem -->
   <base href="/Silver-Coast-Lawyers/">
 
   <title>Ana Ferreira Real – Avocate</title>
   <meta name="description" content="Avocate exerçant à titre individuel, basée à Caldas da Rainha, Silver Coast (Portugal). Achats/ventes et locations immobilières, testaments, successions et contrats. Service en FR/EN/PT.">
 
-  <!-- carrega o mesmo CSS do site -->
+  <!-- CSS principal (mesmo que PT/EN) -->
   <link rel="stylesheet" href="styles.css">
 
-  <!-- Opcional: override MINIMAL para o tamanho do logo em FR -->
+  <!-- Apenas FR: corrigir tamanho do logótipo -->
   <style>
-  img#frLogoFix.logo {
-    width: 520px !important;      /* aumentei o tamanho fixo */
-    max-width: 95vw !important;   /* permite que cresça mais no ecrã */
-    height: auto !important;
-    display: block !important;
-    margin: 0 auto !important;
-    transform: none !important;
+    img#frLogoFix.logo{
+      width: 520px !important;
+      max-width: 95vw !important;
+      height: auto !important;
+      display: block !important;
+      margin: 0 auto !important;
+      transform: none !important;
+      filter: none !important;
+    }
+  </style>
 </head>
-<body>
 
- <header class="site-header">
-  <div class="wrap header-inner">
-    <img
-      id="frLogoFix"
-      class="logo"
-      src="assets/og-image.jpg"
-      alt="Ana Ferreira Real — logotype">
-    <nav class="lang">
-      <a href="/Silver-Coast-Lawyers/">PT</a>
-      <a href="/Silver-Coast-Lawyers/en/">EN</a>
-      <a href="/Silver-Coast-Lawyers/fr/" class="active">FR</a>
-    </nav>
-  </div>
-</header>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <!-- Podes trocar por assets/logo-header.png se quiseres -->
+      <img id="frLogoFix" class="logo" src="assets/og-image.jpg" alt="Ana Ferreira Real — logotype">
+
+      <nav class="lang">
+        <a href="/">PT</a>
+        <a href="/en/">EN</a>
+        <a href="/fr/" class="active">FR</a>
+      </nav>
+    </div>
+  </header>
+
   <main class="wrap">
     <section class="hero">
       <h1>Ana Ferreira Real – Avocate</h1>
@@ -59,12 +61,12 @@
 
     <section class="card">
       <h2>Domaines d’intervention prioritaires</h2>
-      <ul class="pill-list">
-        <li class="pill">Achat et vente de biens immobiliers</li>
-        <li class="pill">Location de biens immobiliers</li>
-        <li class="pill">Testaments et successions</li>
-        <li class="pill">Contrats divers</li>
-        <li class="pill">Conseil juridique</li>
+      <ul>
+        <li>Achat et vente de biens immobiliers</li>
+        <li>Location de biens immobiliers</li>
+        <li>Testaments et successions</li>
+        <li>Contrats divers</li>
+        <li>Conseil juridique</li>
       </ul>
     </section>
 
@@ -72,7 +74,7 @@
       <h2>Contacts</h2>
       <ul class="contact-list">
         <li>📧 E-mail : <a href="mailto:anaferreirareal.adv@gmail.com">anaferreirareal.adv@gmail.com</a></li>
-        <li>📱 Téléphone/WhatsApp : <a href="https://wa.me/351962639197">+351 962 639 197</a></li>
+        <li>📞 Téléphone/WhatsApp : <a href="https://wa.me/351962639197">+351 962 639 197</a></li>
         <li>📍 Adresse : Avenida 1.º de Maio, n.º 1, 2.º andar, 2500-081 Caldas da Rainha</li>
       </ul>
     </section>
@@ -83,6 +85,5 @@
       <small>© 2025 Ana Ferreira Real — Silver Coast Lawyer</small>
     </div>
   </footer>
-
 </body>
 </html>
