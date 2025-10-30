@@ -1,174 +1,105 @@
-/* ====== BASE ====== */
-html, body {
+/* ===========================================================
+   STYLES.CSS – Ana Ferreira Real — Silver Coast Lawyer
+   =========================================================== */
+
+/* --- Base --- */
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #f5f5f5;
+  background-color: #0c0c0c;
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  color: #222;
-  background-color: #fdfdfd;
   line-height: 1.6;
+}
+
+a {
+  color: #d1b77c;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3 {
+  color: #ffffff;
+  font-weight: 600;
 }
 
 .wrap {
   max-width: 900px;
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: 20px;
 }
 
-/* ====== HEADER ====== */
+/* --- Header --- */
 .site-header {
   text-align: center;
-  padding: 1.5rem 1rem;
-  border-bottom: 1px solid #ddd;
-  background: #fff;
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 20px;
 }
 
-.site-header .logo {
-  display: block;
-  margin: 0 auto 0.5rem;
-  height: auto;
-}
-
-/* ====== LANGUAGE NAV ====== */
-.lang {
-  margin-top: 0.75rem;
-}
-
-.lang a {
-  margin: 0 0.5rem;
-  text-decoration: none;
-  color: #555;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.lang a:hover {
-  color: #000;
-}
-
-.lang a.active {
-  color: #b08b52;
-  font-weight: 700;
-}
-
-/* ====== HERO ====== */
-.hero {
-  text-align: center;
-  margin: 2rem 0 1.5rem;
-}
-
-.hero h1 {
-  font-size: 1.8rem;
-  margin-bottom: 0.25rem;
-  color: #111;
-}
-
-.hero .tagline {
-  font-size: 1rem;
-  color: #666;
-  margin-bottom: 1rem;
-}
-
-/* ====== BUTTONS ====== */
-.btn {
-  display: inline-block;
-  padding: 0.6rem 1.2rem;
-  border: 1px solid #b08b52;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  color: #b08b52;
-  margin: 0.25rem;
-  transition: all 0.2s ease;
-}
-
-.btn:hover {
-  background: #b08b52;
-  color: #fff;
-}
-
-.btn.primary {
-  background: #b08b52;
-  color: #fff;
-}
-
-.btn.primary:hover {
-  background: #a27a45;
-}
-
-/* ====== CARDS ====== */
-.card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.06);
-  padding: 1.5rem;
-  margin: 1.5rem 0;
-}
-
-.card h2 {
-  color: #b08b52;
-  font-size: 1.3rem;
-  margin-bottom: 0.8rem;
-}
-
-.card ul {
-  padding-left: 1.2rem;
-}
-
-.card ul li {
-  margin-bottom: 0.4rem;
-}
-
-/* ====== CONTACT LIST ====== */
-.contact-list {
-  list-style: none;
-  padding: 0;
-}
-
-.contact-list li {
-  margin-bottom: 0.4rem;
-}
-
-/* ====== FOOTER ====== */
-.site-footer {
-  text-align: center;
-  padding: 1rem;
-  color: #666;
-  font-size: 0.9rem;
-  border-top: 1px solid #ddd;
-  background: #fff;
-}
-
-/* ====== RESPONSIVE ====== */
-@media (min-width: 768px) {
-  .hero h1 {
-    font-size: 2.1rem;
-  }
-  .wrap {
-    padding: 2rem;
-  }
-  .card {
-    padding: 2rem;
-  }
-}
-
-/* ====== FIX GLOBAL DO LOGÓTIPO ====== */
-:root { --logo-w: 520px; } /* ajusta este valor se quiseres maior/menor */
-
-header .wrap .logo,
-.site-header .logo,
-header .logo,
-img#siteLogo {
-  width: var(--logo-w) !important;
+/* Logo grande e centralizado */
+.site-header img.logo {
+  display: block !important;
+  width: 560px !important;         /* ajusta aqui o tamanho */
   max-width: 95vw !important;
   height: auto !important;
-  display: block !important;
   margin: 0 auto !important;
   transform: none !important;
   filter: none !important;
 }
 
-/* neutraliza transformações que possam reduzir o logo */
-.header-inner,
-header .wrap {
-  transform: none !important;
+/* --- Botões de idioma --- */
+.lang {
+  position: absolute;
+  top: 80px;
+  right: 10%;
+  display: flex;
+  gap: 12px;
 }
+
+.lang a {
+  border: 1px solid #d1b77c;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d1b77c;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.lang a:hover {
+  background-color: #d1b77c;
+  color: #0c0c0c;
+}
+
+.lang a.active {
+  background-color: #d1b77c;
+  color: #0c0c0c;
+}
+
+/* --- Botões principais (WhatsApp / Email) --- */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #d1b77c;
+  border-radius: 8px;
+  color: #d1b77c;
+  margin: 10px 10px 20px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  background: transparent;
+}
+
+.btn:hover {
+  background-color: #d1b77c;
+  color: #0c0c0c;
+}
+
+/* --- Secções --- */
+section {
+  margin-bottom:
