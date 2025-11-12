@@ -1,4 +1,4 @@
-# Site final — Ana Ferreira Real – Silver Coast Lawyer
+# Site final — Ana Ferreira Real – Silver Coast Lawyers
 
 - E-mail: anaferreirareal.adv@gmail.com
 - WhatsApp: +351 962 639 197
