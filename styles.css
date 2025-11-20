@@ -59,3 +59,21 @@ a{color:inherit;text-decoration:none}
   :root{ --logo-w: 88vw; }
   .lang{right:12px}
 }
+/* ==== Corrigir botões de idioma no telemóvel ==== */
+@media (max-width: 768px) {
+
+  /* A barra de idiomas deixa de ser absoluta e passa a comportar-se normalmente */
+  .language-buttons {
+    position: static !important;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    margin-bottom: -10px; /* opcional, ajusta espaço */
+  }
+
+  /* Ajustar tamanho e espaçamento dos botões no telemóvel */
+  .language-buttons a {
+    font-size: 14px;
+    padding: 4px 8px;
+  }
+}
